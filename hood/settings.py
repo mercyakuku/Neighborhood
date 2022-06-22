@@ -10,7 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+import os
 from pathlib import Path
+import django_heroku
+import dj_database_url
+from decouple import config,Csv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -102,6 +109,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+#adding config
+cloudinary.config( 
+  cloud_name=config("YOUR_CLOUD_NAME"),
+  api_key=config("YOUR_API_KEY"), 
+  api_secret=config("YOUR_API_SECRET") 
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
