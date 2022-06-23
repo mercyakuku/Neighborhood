@@ -43,7 +43,7 @@ cd Neighborhood
  ##### Setup Database  
   SetUp your database User,Password, Host then make migrate  
  ```bash 
-python manage.py makemigrations hood
+python manage.py makemigrations neighbors
  ``` 
  Now Migrate  
  ```bash 
@@ -97,4 +97,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Copyright &copy 2022 mercyakuku
+Copyright (c) copy 2022 mercyakuku
